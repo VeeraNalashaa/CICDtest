@@ -14,7 +14,7 @@ env:
   ORCH_CLIENT_ID: ${{ secrets.UIPATHCLIENTID }}
   ORCH_USER_KEY: ${{ secrets.UIPATHUSERKEY }}
   ORCH_ACC_NAME: ${{ secrets.UIPATHACCOUNTNAME }}
-  CLI_URL: https://uipath.visualstudio.com/Public.Feeds/_artifacts/feed/UiPath-Official/NuGet/UiPath.CLI.Windows/overview/22.10.8432.18709 
+  CLI_URL: https://uipath.visualstudio.com/Public.Feeds/_artifacts/feed/UiPath-Official/NuGet/UiPath.CLI.Windows/overview/23.10.8894.39673
 
 jobs:
   print-details:
@@ -67,7 +67,7 @@ jobs:
           name: Artifacts
       - name: Publish Nuget Package to DEV
         shell: pwsh
-        run: ${{"C:\Users\veera\.nuget\packages\cicdtest\1.0.0\lib\net5.0-windows7.0\"}}\scripts\UiPathDeploy.ps1 ${{github.workspace}}\package ${{env.ORCH_URL}} ${{env.ORCH_TENANT}} -UserKey ${{env.ORCH_USER_KEY}} -account_name ${{env.ORCH_ACC_NAME}}
+        run: ${{github.workspace}}\scripts\UiPathDeploy.ps1 ${{github.workspace}}\package ${{env.ORCH_URL}} ${{env.ORCH_TENANT}} -UserKey ${{env.ORCH_USER_KEY}} -account_name ${{env.ORCH_ACC_NAME}}
    
 
     
