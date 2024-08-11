@@ -39,7 +39,7 @@ jobs:
           echo "Cleaning up previous run"
           rm -rf "${{ github.workspace }}"
 		  
-		   Build:
+Build:
     runs-on: windows-latest
     needs: remove-old-artifacts
     steps:            
