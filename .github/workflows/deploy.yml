@@ -67,7 +67,7 @@ jobs:
           name: Artifacts
       - name: Publish Nuget Package to DEV
         shell: pwsh
-        run: ${{"C:\Users\veera\.nuget\packages\cicdtest\1.0.0\lib\net5.0-windows7.0\}}\scripts\UiPathDeploy.ps1 ${{github.workspace}}\package ${{env.ORCH_URL}} ${{env.ORCH_TENANT}} -UserKey ${{env.ORCH_USER_KEY}} -account_name ${{env.ORCH_ACC_NAME}}
+        run: ${{"C:\Users\veera\.nuget\packages\cicdtest\1.0.0\lib\net5.0-windows7.0\"}}\scripts\UiPathDeploy.ps1 ${{github.workspace}}\package ${{env.ORCH_URL}} ${{env.ORCH_TENANT}} -UserKey ${{env.ORCH_USER_KEY}} -account_name ${{env.ORCH_ACC_NAME}}
    
 
     
