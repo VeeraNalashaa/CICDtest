@@ -3,7 +3,7 @@ name: Development workflow
 on:
   push:
     branches:
-      - dev/EmailCICDPipelines
+      - dev/CICDtest
 
 # Here the environment variable is declared in workflow
 env:
